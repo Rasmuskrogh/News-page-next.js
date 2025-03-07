@@ -1,21 +1,5 @@
 {
   "pages": {
-    "/(marketing)/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(marketing)/page.js"
-    ],
-    "/(marketing)/layout": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(marketing)/layout.js"
-    ],
-    "/layout": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/layout.css",
-      "static/chunks/app/layout.js"
-    ],
     "/(content)/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -31,25 +15,16 @@
       "static/chunks/main-app.js",
       "static/chunks/app/(content)/news/page.js"
     ],
-    "/(content)/archive/layout": [
+    "/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/(content)/archive/layout.js"
+      "static/css/app/layout.css",
+      "static/chunks/app/layout.js"
     ],
-    "/(content)/archive/@latest/default": [
+    "/not-found": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/(content)/archive/@latest/default.js"
-    ],
-    "/(content)/archive/@archive/[[...filter]]/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(content)/archive/@archive/[[...filter]]/page.js"
-    ],
-    "/(content)/archive/@archive/[[...filter]]/error": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(content)/archive/@archive/[[...filter]]/error.js"
+      "static/chunks/app/not-found.js"
     ]
   }
 }
