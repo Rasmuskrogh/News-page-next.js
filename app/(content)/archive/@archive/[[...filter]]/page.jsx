@@ -12,18 +12,19 @@ async function FilterHeader({ year, month }) {
   const avaliableYears = await getAvailableNewsYears();
   let links = avaliableYears;
 
-  if (
-    (year && !avaliableYears.includes(year)) ||
-    (month && !getAvailableNewsMonths(year).includes(month))
-  ) {
-    throw new Error("invalid filter.");
+  if (year && !avaliableYears.includes(year)) {
+    throw new Error("invalid year filter.");
   }
 
   if (year && !month) {
-    links = getAvailableNewsMonths(year);
+    links = await getAvailableNewsMonths(year);
   }
 
   if (year && month) {
+    const availableMonths = await getAvailableNewsMonths(year);
+    if (!availableMonths.includes(month)) {
+      throw new Error("invalid month filter.");
+    }
     links = [];
   }
 
@@ -75,7 +76,7 @@ export default async function FilteredNewsPage({ params }) {
       <Suspense fallback={<p>Loading filter...</p>}>
         <FilterHeader year={selectedYear} month={selectedMonth} />
       </Suspense>
-      <Suspense fallbakc={<p>Loading news...</p>}>
+      <Suspense fallback={<p>Loading news...</p>}>
         <FilteredNews year={selectedYear} month={selectedMonth} />
       </Suspense>
     </>

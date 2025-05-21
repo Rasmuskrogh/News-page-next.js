@@ -6,12 +6,18 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "init-db": "node scripts/init-db.cjs",
+    "migrate": "node scripts/migrate-data.cjs"
   },
   "dependencies": {
-    "better-sqlite3": "^11.8.1",
+    "pg": "^8.11.3",
+    "dotenv": "^16.4.5",
     "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18"
+  },
+  "devDependencies": {
+    "better-sqlite3": "^11.8.1"
   }
 }
