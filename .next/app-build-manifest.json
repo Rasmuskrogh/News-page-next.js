@@ -86,10 +86,15 @@
       "static/chunks/main-app.js",
       "static/chunks/app/(content)/archive/@archive/[[...filter]]/error.js"
     ],
-    "/not-found": [
+    "/(content)/news/[slug]/@modal/(.)image/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/not-found.js"
+      "static/chunks/app/(content)/news/[slug]/@modal/(.)image/page.js"
+    ],
+    "/(content)/news/[slug]/image/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(content)/news/[slug]/image/page.js"
     ]
   }
 }
